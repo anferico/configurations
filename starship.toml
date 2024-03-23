@@ -1,0 +1,77 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+[aws]
+style = 'bold yellow'
+symbol = '󰅟 '
+format = '\[[$symbol($profile)]($style)\] '
+
+[cmd_duration]
+disabled = true
+
+[conda]
+symbol = '󱔎 '
+style = '#43b02a bold'
+format = '\[[$symbol$environment]($style)\] '
+
+[container]
+symbol = '󰡨'
+style = 'bold cyan'
+format = '[$symbol \[$name\]]($style) '
+
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+style = 'yellow bold'
+
+[gcloud]
+disabled = true
+
+[git_branch]
+always_show_remote = true
+format = '\[[$symbol$branch(:$remote_branch)]($style)\] '
+
+[git_commit]
+style = 'purple bold'
+format = '\[[(($tag, )󰄀 $hash)]($style)\] '
+tag_disabled = false
+tag_symbol = '󱈤 '
+
+[git_state]
+cherry_pick = '-PICKING'
+
+[git_status]
+ahead = '󰥭'
+behind = '󰥼'
+conflicted = ''
+diverged = '󰥼󰥭'
+modified = '*'
+untracked = '%'
+deleted = ''
+format = '(\[[$all_status$ahead_behind]($style)\] )'
+
+[hostname]
+format = '[$ssh_symbol$hostname]($style) '
+ssh_only = false
+ssh_symbol = ' '
+style = 'green bold'
+
+[python]
+format = '\[[${symbol}${pyenv_prefix}(${version})( \($virtualenv\))]($style)\] '
+symbol = ' '
+style = '#ffe974 bold'
+version_format = '${raw}'
+
+[username]
+format = '[$user@]($style)'
+show_always = true
+style_user = 'green bold'
+style_root = 'green bold'
+
+[ruby]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+detect_variables = []
