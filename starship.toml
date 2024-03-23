@@ -56,7 +56,7 @@ format = '(\[[$all_status$ahead_behind]($style)\] )'
 [hostname]
 format = '[$ssh_symbol$hostname]($style) '
 ssh_only = false
-ssh_symbol = ' '
+ssh_symbol = ''
 style = 'green bold'
 
 [python]
@@ -74,4 +74,31 @@ style_root = 'green bold'
 [ruby]
 format = '\[[$symbol($version)]($style)\]'
 symbol = ' '
+version_format = '${raw}'
 detect_variables = []
+
+[golang]
+format = '\[[$symbol($version)]($style)\]'
+symbol = ' '
+version_format = '${raw}'
+
+[nodejs]
+format = '\[[$symbol($version)]($style)\]'
+version_format = '${raw}'
+
+[os]
+format = '\[[$symbol]($style)\] '
+style = 'bright-cyan'
+disabled = false
+
+[os.symbols]
+Linux = ''
+Ubuntu = ''
+Macos = ''
+Redhat = '󱄛'
+RedHatEnterprise = '󱄛'
+
+[package]
+format = '\[[$symbol$version]($style)\]'
+symbol = '󰏗 '
+version_format = '${raw}'
