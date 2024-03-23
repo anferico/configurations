@@ -5,8 +5,8 @@
 add_newline = true
 
 [aws]
-style = 'bold yellow'
-symbol = '󰅟 '
+style = '#ff9900 bold'
+symbol = '󰸏 '
 format = '\[[$symbol($profile)]($style)\] '
 
 [cmd_duration]
