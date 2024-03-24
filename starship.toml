@@ -33,6 +33,7 @@ disabled = true
 
 [git_branch]
 always_show_remote = false
+symbol = ' '
 format = '\[[$symbol$branch(:$remote_branch)]($style)'
 truncation_length = 25
 
@@ -58,7 +59,7 @@ untracked = ''
 diverged = '󰥼󰥭'
 ahead = '󰥭'
 behind = '󰥼'
-style = 'red'
+style = 'purple bold'
 format = '(\[[$all_status($ahead_behind)]($style)\] )'
 
 [hostname]
