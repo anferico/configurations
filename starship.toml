@@ -8,6 +8,7 @@ add_newline = true
 style = '#ff9900 bold'
 symbol = '󰸏 '
 format = '\[[$symbol($profile)]($style)\] '
+disabled = true
 
 [cmd_duration]
 disabled = true
@@ -31,27 +32,34 @@ style = 'yellow bold'
 disabled = true
 
 [git_branch]
-always_show_remote = true
-format = '\[[$symbol$branch(:$remote_branch)]($style)\] '
+always_show_remote = false
+format = '\[[$symbol$branch(:$remote_branch)]($style)'
+truncation_length = 25
 
 [git_commit]
 style = 'purple bold'
-format = '\[[(($tag, )󰄀 $hash)]($style)\] '
+format = '[, ($tag, )]($style)[(󰄀 $hash)]($style)\] '
 tag_disabled = false
+only_detached = false
 tag_symbol = '󱈤 '
 
 [git_state]
 cherry_pick = '-PICKING'
 
 [git_status]
+conflicted = '󱐌'
+stashed = '󰴮'
+deleted = ''
+renamed = ''
+modified = ''
+#typechanged = ''
+staged = '󰐕'
+untracked = ''
+diverged = '󰥼󰥭'
 ahead = '󰥭'
 behind = '󰥼'
-conflicted = ''
-diverged = '󰥼󰥭'
-modified = '*'
-untracked = '%'
-deleted = ''
-format = '(\[[$all_status$ahead_behind]($style)\] )'
+style = 'red'
+format = '(\[[$all_status( - $ahead_behind)]($style)\] )'
 
 [hostname]
 format = '[$ssh_symbol$hostname]($style) '
