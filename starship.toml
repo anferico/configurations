@@ -50,7 +50,7 @@ cherry_pick = '-PICKING'
 [git_status]
 conflicted = '󱐋'
 stashed = '$'
-deleted = '🗙'
+deleted = '𝗑'
 renamed = '&'
 modified = '*'
 typechanged = ''
