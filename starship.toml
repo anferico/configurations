@@ -109,6 +109,6 @@ Redhat = '󱄛'
 RedHatEnterprise = '󱄛'
 
 [package]
-format = '\[[$symbol$version]($style)\]'
+format = '\[[$symbol$version]($style)\] '
 symbol = '󰏗 '
 version_format = '${raw}'
